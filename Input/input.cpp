@@ -1,7 +1,7 @@
 // input taken
 #include <bits/stdc++.h>
 using namespace std;
-void ArraySpaceInput()
+vector<int> ArraySpaceInput()
 {
     string s;
     getline(cin,s);
@@ -20,6 +20,8 @@ void ArraySpaceInput()
     
     for(int i:arr)
         cout<<i<<" ";
+
+        return arr;
 }
 void  StingInput(){
     string s;
@@ -46,8 +48,8 @@ void  ArraySizeGiven()
 }
 int main() {
     
-        //ArraySpaceInput();
+        vector<int> v=ArraySpaceInput();
         //StingInput();
-        ArraySizeGiven();
+        //ArraySizeGiven();
     
 }

@@ -30,6 +30,7 @@ int Search(Node *root,int num)
     if(!root) return -1;
     if(root->data==num)
         return 1;
+    
     if(root->data>num)
         return Search(root->left,num);
     
@@ -37,10 +38,17 @@ int Search(Node *root,int num)
       
    // return -1;    
 }
-int height(Node *root)
+int minDepth(Node *root)
 {
-    if(root==NULL) return -1;
-    return max(height(root->left),height(root->right))+1;
+    if(root == NULL) return 0;
+
+    if(root->left == NULL)
+        return minDepth(root->right) + 1;
+
+    if(root->right == NULL)
+        return minDepth(root->left) + 1;
+
+    return min(minDepth(root->left), minDepth(root->right)) + 1;
 }
 int max(int a,int b)
 {
