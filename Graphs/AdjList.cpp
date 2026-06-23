@@ -69,9 +69,13 @@ class Graph{
     }
     void dfs()
     {
-        int src=0;
-        vector<bool> vis(V,false);
-        dfsRec(src,vis);
+         vector<bool> vis(V, false);
+
+        for(int i = 0; i < V; i++)
+        {
+            if(!vis[i])
+                dfsRec(i, vis);
+        }
     }
 };
 int main() {

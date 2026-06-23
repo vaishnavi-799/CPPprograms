@@ -55,7 +55,7 @@ int main() {
     g.AddEdge(1,2);
     g.AddEdge(1,3);
     g.AddEdge(2,3);
-    //g.dfs();
+    
 
    
         cout<<g.IsCycle();
